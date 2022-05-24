@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.management.MemoryNotificationInfo;
 
 public class GUI extends JPanel implements ActionListener {
 
@@ -26,7 +27,11 @@ public class GUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand() == "Ur mum"){
             System.out.println("Ur mum");
-            Meme meme = new Meme(300,300);
+            EventQueue.invokeLater(() -> {
+
+                var ex = new Menu();
+                ex.setVisible(true);
+            });
         } else {
             System.out.println("Graph");
             Basic basic = new Basic(300,300);
