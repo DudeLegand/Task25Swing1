@@ -20,7 +20,7 @@ public class Main {
         GUI myGUI = new GUI(600,400);
         jframe.add(myGUI);
         jframe.setSize(300,300);
-        //jframe.pack();
+        jframe.setLocationRelativeTo(null);
         jframe.setVisible(true);
 
     }

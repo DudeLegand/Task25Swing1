@@ -10,6 +10,7 @@ public class Basic extends JPanel {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(width,height);
         frame.getContentPane().add(this);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 

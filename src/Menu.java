@@ -1,61 +1,61 @@
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
+import javax.swing.*;
 import java.awt.EventQueue;
 
 public class Menu extends JFrame {
 
-    public Menu() {
+    JButton button1;
+    JButton button2;
+    JButton button3;
 
+
+    public Menu() {
         initUI();
     }
 
     private void initUI() {
-
         createMenuBar();
-
-        setTitle("Submenu");
+        setTitle("Calculator");
         setSize(360, 250);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     private void createMenuBar() {
 
-        var menuBar = new JMenuBar();
+        JMenuBar menuBar = new JMenuBar();
 
-        var iconNew = new ImageIcon("src/resources/new.png");
-        var iconOpen = new ImageIcon("src/resources/open.png");
-        var iconSave = new ImageIcon("N:\\Computers\\Yr 12\\Images\\sav.png");
-        var iconExit = new ImageIcon("N:\\Computers\\Yr 12\\Images\\exit.png");
+        ImageIcon iconHelp = new ImageIcon("N:\\Computers\\Yr 12\\Images\\help.png");
+        ImageIcon iconCopy = new ImageIcon("N:\\Computers\\Yr 12\\Images\\copy.png");
+        ImageIcon iconSave = new ImageIcon("N:\\Computers\\Yr 12\\Images\\sav.png");
+        ImageIcon iconExit = new ImageIcon("N:\\Computers\\Yr 12\\Images\\exit.png");
 
 
-        var fileMenu = new JMenu("File");
-        var impMenu = new JMenu("Import");
+        JMenu fileMenu = new JMenu("More");
+        JMenu impMenu = new JMenu("Navigate");
 
-        var newsMenuItem = new JMenuItem("Import newsfeed list...");
-        var bookmarksMenuItem = new JMenuItem("Import bookmarks...");
-        var importMailMenuItem = new JMenuItem("Import mail...");
+        JMenuItem navigateToMainMenu = new JMenuItem("Main Menu");
+        JMenuItem navigateToStats = new JMenuItem("Stats");
 
-        impMenu.add(newsMenuItem);
-        impMenu.add(bookmarksMenuItem);
-        impMenu.add(importMailMenuItem);
+        impMenu.add(navigateToMainMenu);
+        impMenu.add(navigateToStats);
 
-        var newMenuItem = new JMenuItem("New", iconNew);
-        var openMenuItem = new JMenuItem("Open", iconOpen);
-        var saveMenuItem = new JMenuItem("Save", iconSave);
+        JMenuItem helpMenuItem = new JMenuItem("Help", iconHelp);
+        helpMenuItem.setToolTipText("Get help from online");
 
-        var exitMenuItem = new JMenuItem("Exit", iconExit);
+        JMenuItem copyMenuItem = new JMenuItem("Copy", iconCopy);
+        copyMenuItem.setToolTipText("Copy current results");
+
+        JMenuItem saveMenuItem = new JMenuItem("Save", iconSave);
+        saveMenuItem.setToolTipText("Save the data");
+
+        JMenuItem exitMenuItem = new JMenuItem("Exit", iconExit);
         exitMenuItem.setToolTipText("Exit application");
 
         exitMenuItem.setBounds(0,0,10,10);
 
         exitMenuItem.addActionListener((event) -> System.exit(0));
 
-        fileMenu.add(newMenuItem);
-        fileMenu.add(openMenuItem);
+        fileMenu.add(helpMenuItem);
+        fileMenu.add(copyMenuItem);
         fileMenu.add(saveMenuItem);
         fileMenu.addSeparator();
         fileMenu.add(impMenu);
