@@ -12,6 +12,7 @@ public class Basic extends JPanel {
         frame.getContentPane().add(this);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
     }
 
     public void paintComponent(Graphics g) {

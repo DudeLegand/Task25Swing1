@@ -65,5 +65,6 @@ public class Menu extends JFrame {
         menuBar.add(fileMenu);
 
         setJMenuBar(menuBar);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 }
