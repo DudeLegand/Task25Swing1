@@ -18,9 +18,17 @@ public class MainFrame extends JFrame{
             this.add(panel);
             panel.setVisible(false);
         }
+
+        this.getContentPane().setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
+
         allPanels[0].setVisible(true);
+        this.setBounds(0,0,1500,1500);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setResizable(false);
     }
 
     public void navigate(int panelToHide, int panelToShow){

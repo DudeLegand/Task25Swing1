@@ -1,11 +1,45 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainMenuGUI extends JPanel implements ActionListener {
 
+    private final int MAIN_MENU_BUTTON = 0;
+
+    JButton toScreenReader;
+    JButton toCalculator;
+    JButton toStats;
+    JMenuBar mainMenuBar;
+    JLabel mainMenuTitle;
+
+
     public MainMenuGUI(){
 
+        //GridLayout layout = new GridLayout(0,2);
+
+        mainMenuTitle = new JLabel("Grind Calculator");
+        mainMenuTitle.setFont(new Font("Consolas", Font.PLAIN,50));
+        mainMenuTitle.setBounds(475,150,500,100);
+        //mainMenuTitle.setBorder(BorderFactory.createEmptyBorder(100,100,100,100));
+        setLayout(null);
+        toScreenReader = new JButton("Screen Reader");
+        toScreenReader.setBounds(125,500,300,100);
+
+        toCalculator = new JButton("Calculator");
+        toCalculator.setBounds(525,500,300,100);
+
+        toStats = new JButton("Screen Reader");
+        toStats.setBounds(925,500,300,100);
+
+        this.setBounds(0,0,1500,1500);
+
+        this.add(mainMenuTitle);
+        this.add(toScreenReader);
+        this.add(toCalculator);
+        this.add(toStats);
+
+        //setLayout(layout);
     }
 
 
