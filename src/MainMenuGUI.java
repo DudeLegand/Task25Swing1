@@ -25,12 +25,15 @@ public class MainMenuGUI extends JPanel implements ActionListener {
         setLayout(null);
         toScreenReader = new JButton("Screen Reader");
         toScreenReader.setBounds(125,500,300,100);
+        toScreenReader.addActionListener(this);
 
         toCalculator = new JButton("Calculator");
         toCalculator.setBounds(525,500,300,100);
+        toCalculator.addActionListener(this);
 
-        toStats = new JButton("Screen Reader");
+        toStats = new JButton("Stats");
         toStats.setBounds(925,500,300,100);
+        toStats.addActionListener(this);
 
         this.setBounds(0,0,1500,1500);
 
@@ -45,6 +48,20 @@ public class MainMenuGUI extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        switch (e.getActionCommand()){
+            case "Screen Reader":
+                MainFrame.navigate(0,1);
+                break;
+
+            case "Grind Calculator":
+                MainFrame.navigate(0,2);
+                break;
+
+            case "Stats":
+                MainFrame.navigate(0,3);
+                break;
+        }
 
     }
 }

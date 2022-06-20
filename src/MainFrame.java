@@ -6,13 +6,14 @@ import java.awt.*;
 // TODO: 26/05/2022 Add all panels
 
 public class MainFrame extends JFrame{
-    JPanel[] allPanels;
+    private static JPanel[] allPanels;
 
     public MainFrame(){
-        allPanels = new JPanel[3];
+        allPanels = new JPanel[4];
         allPanels[0] = new MainMenuGUI();
-        allPanels[1] = new CalculatorGUI();
-        allPanels[2] = new StatsGUI();
+        allPanels[1] = new ScreenReaderGUI();
+        allPanels[2] = new CalculatorGUI();
+        allPanels[3] = new StatsGUI();
         for (JPanel panel :
                 allPanels) {
             this.add(panel);
@@ -31,7 +32,7 @@ public class MainFrame extends JFrame{
         setResizable(false);
     }
 
-    public void navigate(int panelToHide, int panelToShow){
+    public static void navigate(int panelToHide, int panelToShow){
         allPanels[panelToHide].setVisible(false);
         allPanels[panelToShow].setVisible(true);
     }
