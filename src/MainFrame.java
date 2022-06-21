@@ -3,8 +3,6 @@ import java.awt.*;
 
 //Main Frame the creates all the panels and hides the one you don't need
 
-// TODO: 26/05/2022 Add all panels
-
 public class MainFrame extends JFrame{
     private static JPanel[] allPanels;
 

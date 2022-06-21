@@ -54,7 +54,7 @@ public class MainMenuGUI extends JPanel implements ActionListener {
                 MainFrame.navigate(0,1);
                 break;
 
-            case "Grind Calculator":
+            case "Calculator":
                 MainFrame.navigate(0,2);
                 break;
 
