@@ -23,6 +23,11 @@ public class MainMenuGUI extends JPanel implements ActionListener {
         mainMenuTitle.setBounds(475,150,500,100);
         //mainMenuTitle.setBorder(BorderFactory.createEmptyBorder(100,100,100,100));
         setLayout(null);
+
+        mainMenuBar = new JMenuBar();
+
+
+
         toScreenReader = new JButton("Screen Reader");
         toScreenReader.setBounds(125,500,300,100);
         toScreenReader.addActionListener(this);

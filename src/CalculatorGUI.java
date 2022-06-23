@@ -32,7 +32,7 @@ public class CalculatorGUI extends JPanel implements ActionListener {
 
         switch (e.getActionCommand()){
             case "Back":
-                MainFrame.navigate(3,0);
+                MainFrame.navigate(2,0);
                 break;
 
         }
